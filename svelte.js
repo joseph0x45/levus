@@ -6,6 +6,10 @@ const svelte = {
             name: "Centered",
             description: `A container that spans the full screen and centers its children vertically and horizontally.`
         },
+        {
+            name: "Bruh",
+            description: `A container that spans the full screen and centers its children vertically and horizontally.`
+        }
     ],
     ui: [
         {

@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@inquirer/select':
+    specifier: ^1.2.1
+    version: 1.2.1
   chalk:
     specifier: ^5.2.0
     version: 5.2.0
@@ -9,6 +12,39 @@ dependencies:
     version: 9.2.7
 
 packages:
+
+  /@inquirer/core@2.1.0:
+    resolution: {integrity: sha512-Hq9hZ5G/VUaeWkSs283HZwwMbe79lcOI5HWwW1GIM1ohouy2/x489Qf/A1BJYvMUj+QG4LSB5LtVMjn9P3Ge6Q==}
+    engines: {node: '>=14.18.0'}
+    dependencies:
+      '@inquirer/type': 1.1.0
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      cli-spinners: 2.9.0
+      cli-width: 4.0.0
+      figures: 3.2.0
+      mute-stream: 1.0.0
+      run-async: 3.0.0
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wrap-ansi: 6.2.0
+    dev: false
+
+  /@inquirer/select@1.2.1:
+    resolution: {integrity: sha512-13JDLtlwFoqQUYRdMzz5wP3a4DWccJfNA/8M8MDUhhZ8HeKZ3MPaTMlpxwY+Q0Jgbmt56nf7xUuck0XXPce8Xw==}
+    engines: {node: '>=14.18.0'}
+    dependencies:
+      '@inquirer/core': 2.1.0
+      '@inquirer/type': 1.1.0
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      figures: 3.2.0
+    dev: false
+
+  /@inquirer/type@1.1.0:
+    resolution: {integrity: sha512-XMaorygt2o/mXinZg/OOz6d3JKuV3o4jRc/3KDiVPeKLLkjiO4iJErbLKtKn+Od2ZC2lbiFQkrIuloVpEubisA==}
+    engines: {node: '>=14.18.0'}
+    dev: false
 
   /ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
@@ -108,6 +144,11 @@ packages:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: false
 
+  /escape-string-regexp@1.0.5:
+    resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
+    engines: {node: '>=0.8.0'}
+    dev: false
+
   /escape-string-regexp@5.0.0:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
@@ -120,6 +161,13 @@ packages:
       chardet: 0.7.0
       iconv-lite: 0.4.24
       tmp: 0.0.33
+    dev: false
+
+  /figures@3.2.0:
+    resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
+    engines: {node: '>=8'}
+    dependencies:
+      escape-string-regexp: 1.0.5
     dev: false
 
   /figures@5.0.0:
