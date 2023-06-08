@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-console.log("Hello from a random package")
+console.log("Hello from a random levus")

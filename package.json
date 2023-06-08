@@ -1,7 +1,7 @@
 {
-  "name": "tbd",
+  "name": "levus",
   "version": "1.0.0",
-  "description": "",
+  "description": "UI component shit",
   "bin": "./bin.js",
   "type": "module",
   "scripts": {
