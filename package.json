@@ -13,6 +13,7 @@
   "dependencies": {
     "@inquirer/select": "^1.2.1",
     "chalk": "^5.2.0",
+    "fs-extra": "^11.1.1",
     "inquirer": "^9.2.7"
   }
 }
