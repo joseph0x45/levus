@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 
-console.log("Hello from a random levus")
+import { svelte } from "./utils";
+//npx levus ls
