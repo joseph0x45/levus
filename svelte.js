@@ -1,5 +1,6 @@
 const svelte = {
     path: "./components/svelte",
+    import_path: "./src/lib/ui/levus",
     name:"Svelte",
     layouts: [
         {
