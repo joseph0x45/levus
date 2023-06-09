@@ -1,23 +1,25 @@
-const svelte = {
-    path: "./components/svelte",
-    import_path: "./src/lib/ui/levus",
-    name:"Svelte",
-    layouts: [
-        {
-            name: "Centered",
-            description: `A container that spans the full screen and centers its children vertically and horizontally.`
-        },
-        {
-            name: "Bruh",
-            description: `A container that spans the full screen and centers its children vertically and horizontally.`
-        }
-    ],
-    ui: [
-        {
-            name: "Button",
-            description: "A simple customizable button."
-        }
-    ]
-}
+import { getComponentsDetailsByGroup } from "./utils.js";
+import fs from "fs";
+import path from "path";
 
-export default svelte
+const svelteComponentsPath = "./components/svelte";
+
+const svelte = {
+  path: svelteComponentsPath,
+  import_path: "./src/lib/ui/levus",
+  name: "Svelte",
+};
+
+// Read the subdirectories within the svelteComponentsPath
+const subdirectories = fs.readdirSync(svelteComponentsPath, { withFileTypes: true })
+  .filter((dirent) => dirent.isDirectory())
+  .map((dirent) => dirent.name);
+
+// Add a field for each subdirectory
+subdirectories.forEach((subDirName) => {
+  svelte[subDirName] = getComponentsDetailsByGroup(svelteComponentsPath, subDirName);
+});
+
+//TODO refactor this object to have a components_group array of each group of component
+
+export default svelte;
