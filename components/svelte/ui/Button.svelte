@@ -1,6 +1,6 @@
 <script lang="ts">
   export let title = "Button";
-  export const data = {
+  export const details = {
     name: "Button",
     description: "A simple customizable button.",
   };
