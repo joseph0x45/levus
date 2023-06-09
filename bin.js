@@ -81,14 +81,8 @@ if (args[2] === "ls") {
 
 }
 
-//npx asda add ui/Button
 if (args[2] === "add") {
-    let [framework, group, component] = args[3].split("/")
-    if (
-        !framework
-    ) {
-        log("")
-    }
+
 }
 
 
