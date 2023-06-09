@@ -1,6 +1,5 @@
 import { getComponentsDetailsByGroup } from "./utils.js";
 import fs from "fs";
-import path from "path";
 
 const svelteComponentsPath = "./components/svelte";
 
@@ -8,6 +7,7 @@ const svelte = {
   path: svelteComponentsPath,
   import_path: "./src/lib/ui/levus",
   name: "Svelte",
+  component_groups: []
 };
 
 // Read the subdirectories within the svelteComponentsPath
@@ -15,11 +15,13 @@ const subdirectories = fs.readdirSync(svelteComponentsPath, { withFileTypes: tru
   .filter((dirent) => dirent.isDirectory())
   .map((dirent) => dirent.name);
 
-// Add a field for each subdirectory
+// Add components to each group in the component_groups array
 subdirectories.forEach((subDirName) => {
-  svelte[subDirName] = getComponentsDetailsByGroup(svelteComponentsPath, subDirName);
+  const groupComponents = getComponentsDetailsByGroup(svelteComponentsPath, subDirName);
+  svelte.component_groups.push({
+    name: subDirName,
+    components: groupComponents
+  });
 });
-
-//TODO refactor this object to have a components_group array of each group of component
 
 export default svelte;
